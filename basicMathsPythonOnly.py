@@ -18,3 +18,16 @@ def generate_math_pairs(operation):
     y = random.randrange(1,max_val)
 
     if operation == 'add':
+        result = x+y
+        symbol = '+'
+    elif operation == 'sub':
+        result = x-y
+        symbol ='-'
+    elif operation == 'mul':
+        result = x*y
+        symbol ='*'
+    elif operation == 'div':
+        result = x/y
+        symbol ='/'
+
+    str_in = 
