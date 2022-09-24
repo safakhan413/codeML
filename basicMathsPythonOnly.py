@@ -30,4 +30,7 @@ def generate_math_pairs(operation):
         result = x/y
         symbol ='/'
 
-    str_in = 
+    str_in = "{}{}{}\n".format(x,symbol,y)
+    str_out = "{}\n".format(result)
+
+############# generate training data file
