@@ -1,5 +1,10 @@
 # total_sample_size = 3000000
 # max_val = 10000
+from network import Network
+from fc_layer import FCLayer
+# from activation_layer import ActivationLayer
+from activations import tanh, tanh_prime
+from losses import mse, mse_prime
 
 total_sample_size = 30
 max_val = 30
@@ -59,10 +64,12 @@ def gen_train_data_n_labels(method = 'add'):
         # for y in range(1, 6):
         training_in[i] = x, y
         labels[i] = result 
+    df_in = pd.DataFrame(training_in, columns = ['X','Y'])
+    df_out = pd.DataFrame(labels, columns = ['Result'])
 
-    return training_in, labels
+    return df_in, df_out
 
 
 if __name__ == "__main__":
-        training_in,labels = gen_train_data_n_labels(method = 'add')
-        # print(training_in, labels, type(training_in))
+        a,b = gen_train_data_n_labels(method = 'add')
+        print(a,'\n'b, type(a))

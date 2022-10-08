@@ -18,7 +18,7 @@ class FCLayer(Layer):
     # computes dE/dW, dE/dB for a given output_error=dE/dY. Returns input_error=dE/dX.
     def backward_propagation(self, output_error, learning_rate):
         print(self.weights.T, self.input.T)
-        input_error = np.dot(output_error, self.weights.T) # .t just gives transpose of a numpy array
+        input_error = np.dot(output_error, self.weights.T) # .T just gives transpose of a numpy array
         weights_error = np.dot(self.input.T, output_error)
         # dBias = output_error
 
